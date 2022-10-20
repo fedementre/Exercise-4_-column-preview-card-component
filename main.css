@@ -1,0 +1,207 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(56rem, 55%, 68.75rem);
+  height: clamp(31.25rem, 64%, 32.5rem);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column_1 {
+  width: 33.3333333333%;
+  height: auto;
+  background-color: hsl(31deg, 77%, 52%);
+  border-radius: 0.625rem 0 0 0.625rem;
+}
+
+.column_2 {
+  width: 33.3333333333%;
+  height: auto;
+  background-color: hsl(184deg, 100%, 22%);
+}
+
+.column_3 {
+  width: 33.3333333333%;
+  height: auto;
+  background-color: hsl(179deg, 100%, 13%);
+  border-radius: 0 0.625rem 0.625rem 0;
+}
+
+.box {
+  padding: 2.8125rem;
+}
+
+.box > .title {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 2.5rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.icons, .title, .box_paragraph {
+  margin-bottom: 2.1875rem;
+}
+
+.box > .box_paragraph {
+  font-size: 1em;
+  font-family: "Lexend Deca", sans-serif;
+  color: hsla(0deg, 0%, 100%, 0.75);
+}
+
+.box > .more-info {
+  font-size: 1em;
+  font-family: "Lexend Deca", sans-serif;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 0px solid hsla(0deg, 0%, 100%, 0.75);
+  height: 3rem;
+  width: 8.75rem;
+  border-radius: 1.875rem;
+  margin-top: 3.125rem;
+}
+
+.info_1 {
+  color: hsl(31deg, 77%, 52%);
+}
+
+.info_2 {
+  color: hsl(184deg, 100%, 22%);
+}
+
+.info_3 {
+  color: hsl(179deg, 100%, 13%);
+}
+
+.more-info:hover {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.95);
+  transition: all ease-in 0.25s;
+  border: 2px solid rgba(255, 255, 255, 0.95);
+}
+
+.info_1:hover {
+  background-color: hsl(31deg, 77%, 52%);
+  transition: all ease-in 0.25s;
+}
+
+.info_2:hover {
+  background-color: hsl(184deg, 100%, 22%);
+  transition: all ease-in 0.25s;
+}
+
+.info_3:hover {
+  background-color: hsl(179deg, 100%, 13%);
+  transition: all ease-in 0.25s;
+}
+
+.attribution {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.9em;
+  font-family: "Lexend Deca", sans-serif;
+  margin-top: -30px;
+}
+
+@media screen and (max-width: 900px) {
+  .attribution {
+    position: relative;
+    top: 230vh;
+    padding: 10px;
+    font-size: 0.7em;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .container {
+    width: 85%;
+  }
+  .box > .more-info {
+    margin-top: 0px;
+  }
+  .column_1, .column_2, .column_3 {
+    width: 100%;
+  }
+  .column_1 {
+    border-radius: 0.625rem 0.625rem 0 0;
+  }
+  .column_3 {
+    border-radius: 0 0 0.625rem 0.625rem;
+  }
+}/*# sourceMappingURL=main.css.map */

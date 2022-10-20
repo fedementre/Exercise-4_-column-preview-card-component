@@ -1,0 +1,32 @@
+//main: main.scss
+
+@mixin center_object {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+@mixin columns_size {
+  width: calc(100% / 3);
+  height: auto;
+}
+
+@mixin animation_button($value) {
+  cursor: pointer;
+  color: $value;
+  transition: all ease-in 0.250s;
+  border: 2px solid $value;
+}
+
+@mixin button_style {
+    font-size: $paragraph_font_size;
+    font-family: $font_paragraph;
+    background-color: $title_color;
+    border: 0px solid $paragraph_color;
+    height: 3rem;
+    width: 8.75rem;
+    border-radius: 1.875rem;
+    margin-top: 3.125rem;
+}
